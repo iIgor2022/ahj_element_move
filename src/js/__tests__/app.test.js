@@ -9,7 +9,7 @@ test("new App(index) should generate board index**2", () => {
 
 test("app.gamePlay should call setInterval", () => {
   app.gamePlay();
-  expect(setInterval).toHaveBeenCalled();
+  expect(setInterval).toHaveBeenCalledTimes(1);
 });
 
 test("App.getHole should return element with id hole(index)", () => {
