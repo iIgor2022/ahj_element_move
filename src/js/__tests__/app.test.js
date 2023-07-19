@@ -8,6 +8,7 @@ test("new App(index) should generate board index**2", () => {
 });
 
 test("app.gamePlay should call setInterval", () => {
+  jest.spyOn(global, "setInterval");
   app.gamePlay();
   expect(setInterval).toHaveBeenCalledTimes(1);
 });
