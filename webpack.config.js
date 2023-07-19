@@ -13,7 +13,9 @@ module.exports = {
     app: path.join(__dirname, srcFolder, "index.js"),
   },
   output: {
+    filename: "main.js",
     path: path.resolve(__dirname, distFolder),
+    assetModuleFilename: "[file]",
     // ... next 2 lines we r fighting with Error: Universal Chunk Loading is not implemented yet at EnableChunkLoadingPlugin.apply
     // chunkLoading: false,
     // wasmLoading: false,
@@ -41,15 +43,8 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              limit: true,
-            },
-          },
-        ],
+        test: /\.png$/,
+        type: "asset/resource",
       },
     ],
   },
