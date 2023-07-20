@@ -8,6 +8,7 @@ test("new App(index) should generate board index**2", () => {
 });
 
 test("app.gamePlay should call setInterval", () => {
+  // eslint-disable-next-line no-undef
   jest.spyOn(global, "setInterval");
   app.gamePlay();
   expect(setInterval).toHaveBeenCalledTimes(1);
@@ -36,5 +37,5 @@ test("app.moveGoblin(index) should append goblin element to the hole element wit
   App.getHole = jest.fn(() => expected);
   jest.spyOn(App.getHole(1), "append");
   app.moveGoblin(1);
-  expect(App.getHole(1).append).toBeCalledWith(app.goblin);
+  expect(App.getHole(1).append).toHaveBeenCalledWith(app.goblin);
 });

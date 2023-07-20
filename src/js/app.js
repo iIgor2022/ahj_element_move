@@ -15,7 +15,7 @@ export default class App {
     this.title.innerText = "WACK THE GOBLIN!";
     this.container.append(this.title);
     this.divArray = [];
-    for (let i = 0; i < boardsize ** 2; i += 1) {
+    for (let i = 0; i < Math.pow(boardsize, 2); i += 1) {
       this.divArray[i] = document.createElement("div");
       this.divArray[i].classList.add("hole");
       this.divArray[i].setAttribute("id", `hole${i}`);

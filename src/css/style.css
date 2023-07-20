@@ -1,5 +1,5 @@
 /*Обнуление*/
-/* * {
+* {
     padding: 0;
     margin: 0;
     border: 0;
@@ -18,16 +18,16 @@
   a:focus,
   a:active {
     outline: none;
-  } */
+  }
   
   nav,
   footer,
-  header/*,
-  aside*/ {
+  header,
+  aside {
     display: block;
   }
   
-  /* html,
+  html,
   body {
     height: 100%;
     width: 100%;
@@ -42,11 +42,11 @@
   button,
   textarea {
     font-family: inherit;
-  } */
+  }
   
-  /* input::-ms-clear {
+  input::-ms-clear {
     display: none;
-  } */
+  }
   button {
     cursor: pointer;
   }
